@@ -1,0 +1,40 @@
+<?=$this->Form->create('Candidate',array('type' => 'file','enctype' => 'multipart/form-data'));?>
+<?=$this->Form->input('individual',array(
+	'label'=>'候補者名',
+	'after'=>'苗字と名前の間にスペースを入れてください。',
+));?>
+<?=$this->Form->input('age',array(
+	'label'=>'年齢',
+));?>
+<?=$this->Form->input('interview',array(
+	'label'=>'初回面談日',
+	'dateFormat'=>'YMD',
+	'monthNames'=>'true',
+	'maxYear'=>date('Y'),
+	'minYrar'=>date('Y')-5,
+));?>
+<?=$this->Form->input('user_id',array(
+	'options'=>$users,
+	'label'=>'候補者担当',
+));?>
+<?=$this->Form->input('situation_id',array(
+	'options'=>$situations,
+	'label'=>'進捗状況',
+));?>
+<?=$this->Form->input('job_id',array(
+	'options'=>$jobs,
+	'label'=>'職種'
+));?>
+<?=$this->Form->input('salary',array(
+	'label'=>'年収',
+));?>
+<?=$this->Form->input('remark',array(
+	'label'=>'備考',
+	'after'=>'具体的なポジションや経験、人柄など',
+));?>
+<?=$this->flash->render();?>
+
+<?=$this->Form->file('image');?>
+
+<?=$this->Form->submit('登録');?>
+<?=$this->Form->end();?>
