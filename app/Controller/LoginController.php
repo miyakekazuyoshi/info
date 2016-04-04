@@ -18,10 +18,11 @@ class LoginController extends AppController{
 	public function index(){
 		if ($this->request->is('post')) {
 			$data = $this->request->data;
-			//var_dump($this->request->data);
-			//exit;
 
-			if ($this->Auth->login($data)) {
+				var_dump($data);
+				exit;
+				
+			if ($this->Auth->login()) {
 				$this->redirect($this->Auth->redirectUrl());
 			} else {
 				$this->Flash->set('IDとパスワードが一致しませんでした。');
