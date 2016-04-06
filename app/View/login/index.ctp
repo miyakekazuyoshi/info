@@ -7,8 +7,8 @@
 	<?=$this->Form->create('User');?>
 	<table>
 		<tr>
-			<th>ユーザーID</th>
-			<td><?=$this->Form->input('name',array('label'=>''));?></td>
+			<th>ID</th>
+			<td><?=$this->Form->input('loginId',array('label'=>''));?></td>
 		</tr>
 		<tr>
 			<th>パスワード</th>

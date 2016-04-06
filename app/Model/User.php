@@ -14,6 +14,16 @@ class User extends AppModel{
 				'message'=>'パスワードは6文字以上です。'
 			]
 		],
+		'loginId' => [
+			'rule1' => [
+				'rule' => 'notBlank',
+				'message' => 'loginidを入力してください。'
+			],
+			'rule2' => [
+				'rule' => 'alphaNumeric',
+				'message' => 'loginidは半角英数字にしてください。'
+			]
+		],
 		'name'=>[
 			'rule1'=>[
 				'rule'=>'notBlank',

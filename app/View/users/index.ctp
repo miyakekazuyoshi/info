@@ -3,6 +3,7 @@
 	<tr>
 		<th>id</th>
 		<th>名前</th>
+		<th>ログインID</th>
 		<th>パスワード</th>
 		<th>編集リンク</th>
 	</tr>
@@ -11,6 +12,7 @@
 		<tr>
 			<td><?=$user['User']['id'];?></td>
 			<td><?=$user['User']['name'];?></td>
+			<td><?=$user['User']['loginId'];?></td>
 			<td><?=$user['User']['password'];?></td>
 
 			<td><?=$this->Html->link('詳細',['action'=>'view',$user['User']['id']])?>

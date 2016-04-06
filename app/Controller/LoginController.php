@@ -2,26 +2,26 @@
 
 App::uses('BlowfishPasswordHasher', 'Controller\Component\Auth');
 
-class LoginController extends AppController{
+class LoginController extends AppController {
 
-	public function logout(){
+	public function logout() {
 		$this->redirect($this->Auth->logout());
 	}
 
-	public function beforeFilter(){
+	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('index');
 	}
 
-	public $uses=['User'];
+	public $uses = ['User'];
 
-	public function index(){
+	public function index() {
 		if ($this->request->is('post')) {
 			$data = $this->request->data;
 
-				var_dump($data);
-				exit;
-				
+				//var_dump($data);
+				//exit;
+
 			if ($this->Auth->login()) {
 				$this->redirect($this->Auth->redirectUrl());
 			} else {
@@ -33,10 +33,10 @@ class LoginController extends AppController{
 	public function init() {
 		$hasher = new BlowfishPasswordHasher();
 		$this->User->save([
-			'name' => 'テスト',
-			'login_id' => 'test',
-			'password' => $hasher->hash('test')
+			'name' => 'ブライエッジ',
+			'loginId' => 'briedge',
+			'password' => $hasher->hash('briedge777')
 		]);
-	}
-*/
+	}*/
+
 }
