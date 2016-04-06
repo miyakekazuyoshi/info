@@ -1,5 +1,5 @@
 <?=$this->Form->create();?>
-<?=$this->Form->input('name',array(
+<?=$this->Form->input('username',array(
 	'label'=>'名前',
 ));?>
 

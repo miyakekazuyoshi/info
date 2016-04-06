@@ -11,7 +11,7 @@
 	<?php foreach($users as $user) {?>
 		<tr>
 			<td><?=$user['User']['id'];?></td>
-			<td><?=$user['User']['name'];?></td>
+			<td><?=$user['User']['username'];?></td>
 			<td><?=$user['User']['loginId'];?></td>
 			<td><?=$user['User']['password'];?></td>
 

@@ -1,6 +1,6 @@
 <dl>
-	<dt>name</dt>
-		<dd><?=$user['User']['name']?></dd>
-	<dt>password</dt>
+	<dt>ユーザー名</dt>
+		<dd><?=$user['User']['username']?></dd>
+	<dt>パスワード</dt>
 		<dd><?=$user['User']['password']?></dd>
 </dl>

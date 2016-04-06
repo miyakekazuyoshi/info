@@ -15,7 +15,7 @@ class ClientsController extends AppController{
 					'conditions'=>['OR'=>
 						['company like'=>'%'.$this->request->data['Client']['search'].'%',
 							'info like'=>'%'.$this->request->data['Client']['search'].'%',
-							'name like'=>'%'.$this->request->data['Client']['search'].'%',
+							'username like'=>'%'.$this->request->data['Client']['search'].'%',
 							'remark like'=>'%'.$this->request->data['Client']['search'].'%',
 						],
 					]

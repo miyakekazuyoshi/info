@@ -21,7 +21,7 @@
 			<td><?=$candidate['Situation']['type'];?></td>
 			<td><?=$candidate['Job']['position'];?></td>
 			<td><?=$candidate['Candidate']['salary'].' 万円';?></td>
-			<td><?=$candidate['User']['name'];?></td>
+			<td><?=$candidate['User']['username'];?></td>
 			<td><?=mb_substr($candidate['Candidate']['remark'],0,40);?></td>
 
 			<td><?=$this->Html->link('詳細',['action'=>'view',$candidate['Candidate']['id']])?>

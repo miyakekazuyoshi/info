@@ -6,7 +6,7 @@
 	<dd><?=$client['Client']['fellowship'].'  様';?></dd>
 
 	<dt>企業担当</dt>
-	<dd><?=$client['User']['name'];?></dd>
+	<dd><?=$client['User']['username'];?></dd>
 
 	<dt>企業名</dt>
 	<dd><?=$client['Client']['company'].'  様';?></dd>

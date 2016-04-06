@@ -18,7 +18,7 @@
 	<dd><?=$candidate['Situation']['type'];?></dd>
 
 	<dt>候補者担当</dt>
-	<dd><?=$candidate['User']['name'];?></dd>
+	<dd><?=$candidate['User']['username'];?></dd>
 
 	<dt>備考</dt>
 	<dd><?=$candidate['Candidate']['remark'];?></dd>

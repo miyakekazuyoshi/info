@@ -32,7 +32,7 @@ class CandidatesController extends AppController{
 				='%'.$this->request->data['Candidate']['search'].'%';
 			}
 			if($this->request->data['Candidate']['search']){
-				$param['conditions']['OR']['name like']
+				$param['conditions']['OR']['username like']
 				='%'.$this->request->data['Candidate']['search'].'%';
 			}
 			if($this->request->data['Candidate']['search']){

@@ -14,7 +14,7 @@
 		<tr>
 			<td><?=mb_substr($client['Client']['company'],0,8).' 様';?></td>
 			<td><?=mb_substr($client['Client']['info'],0,40);?></td>
-			<td><?=$client['User']['name'];?></td>
+			<td><?=$client['User']['username'];?></td>
 			<td><?=$client['Client']['visit'];?></td>
 			<td><?=mb_substr($client['Client']['remark'],0,35);?></td>
 

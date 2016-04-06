@@ -22,7 +22,7 @@ class LoginController extends AppController {
 				//var_dump($data);
 				//exit;
 
-			if ($this->Auth->login()) {
+			if ($this->Auth->login($data)) {
 				$this->redirect($this->Auth->redirectUrl());
 			} else {
 				$this->Flash->set('IDとパスワードが一致しませんでした。');
