@@ -3,10 +3,6 @@
 	'label'=>'名前',
 ));?>
 
-<?=$this->Form->input('loginId',array(
-	'label' => 'ログイン時に入力するID',
-));?>
-
 <?=$this->Form->input('password',array(
 	'label'=>'パスワード【６文字以上】',
 ));?>

@@ -33,20 +33,18 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	public $components=array(
 		'Flash',
-		'Session',
-		'Cookie',
 		'Auth'=>array(
-			'loginAction'=>array(
+			/*'loginAction'=>array(
 				'controller'=>'login',
 				'action'=>'index'
-			),
+			),*/
 			'loginRedirect'=>array(
 				'controller'=>'menu',
 				'action'=>'index'
 			),
 			'logoutRedirect'=>array(
-				'controller'=>'login',
-				'action'=>'index'
+				'controller'=>'users',
+				'action'=>'add',
 			),
 			'authenticate' => array(
 				'Form' => array(

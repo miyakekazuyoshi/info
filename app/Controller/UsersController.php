@@ -4,6 +4,28 @@ App::uses('BlowfishPasswordHasher', 'Controller\Component\Auth');
 
 class UsersController extends AppController{
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('index');
+	}
+
+	public function login() {
+		if($this->request->is('post')) {
+			$data = $this->request->data;
+			//var_dump($data);
+			//exit;
+			if($this->Auth->login()) {
+				$this->redirect($this->Auth->redirect());
+			} else {
+				$this->Flash->set('IDとpasswordが一致しません。');
+			}
+		}
+	}
+
+	public function logout() {
+		$this->redirect($this->Auth->logout());
+	}
+
 	public function index(){
 		$this->set('users',$this->User->find('all'));
 	}
@@ -51,3 +73,4 @@ class UsersController extends AppController{
 		$this->redirect(['action'=>'index']);
 	}
 }
+	
