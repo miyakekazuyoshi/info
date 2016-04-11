@@ -25,15 +25,8 @@ class User extends AppModel{
 			'rule2'=>[
 				'rule'=>'isUnique',
 				'message'=>'すでに存在する名前です。'
-			]
-		],
-		'role' => array(
-			'valid' => array(
-				'rule' => array('inList',array('admin','author')),
-				'message' => 'Please enter a valid role',
-				'allowEmpty' => false
-			)
-		)
+			],
+		]
 	];
 
 	public function beforeSave($options = array()) {

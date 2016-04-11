@@ -4,16 +4,18 @@ App::uses('BlowfishPasswordHasher', 'Controller\Component\Auth');
 
 class UsersController extends AppController{
 
+	public $component = array('Session','Auth');
+
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index');
+		$this->Auth->allow('add','index');
 	}
 
 	public function login() {
 		if($this->request->is('post')) {
 			$data = $this->request->data;
-			//var_dump($data);
-			//exit;
+			var_dump($data);
+			exit;
 			if($this->Auth->login()) {
 				$this->redirect($this->Auth->redirect());
 			} else {
