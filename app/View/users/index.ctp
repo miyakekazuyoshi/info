@@ -2,8 +2,8 @@
 <table>
 	<tr>
 		<th>id</th>
-		<th>名前</th>
-		<th>パスワード</th>
+		<th>username</th>
+		<th>password</th>
 		<th>編集リンク</th>
 	</tr>
 
