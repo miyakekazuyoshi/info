@@ -10,12 +10,12 @@ class ClientsController extends AppController{
 	
 	public function index(){
 		$data=$this->request->deta;
-			if($this->request->is('post')){
+			if($this->request->is('get')){
 				$this->paginate=[
 					'conditions'=>['OR'=>
 						['company like'=>'%'.$this->request->data['Client']['search'].'%',
 							'info like'=>'%'.$this->request->data['Client']['search'].'%',
-							'username like'=>'%'.$this->request->data['Client']['search'].'%',
+							'username like'=>'%'.!empty($this->request->query['Client']['search']).'%',
 							'remark like'=>'%'.$this->request->data['Client']['search'].'%',
 						],
 					]

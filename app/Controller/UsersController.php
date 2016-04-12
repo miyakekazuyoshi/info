@@ -8,7 +8,7 @@ class UsersController extends AppController{
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('add','index');
+		$this->Auth->allow('index','init');
 	}
 
 	public function login() {
@@ -19,7 +19,7 @@ class UsersController extends AppController{
 			if($this->Auth->login()) {
 				$this->redirect($this->Auth->redirect());
 			} else {
-				$this->Flash->set('IDとpasswordが一致しません。');
+				$this->Flash->set('usernameとpasswordが一致しません。');
 			}
 		}
 	}
@@ -73,6 +73,14 @@ class UsersController extends AppController{
 		$this->User->delete();
 		$this->Flash->set('データの削除に成功しました。');
 		$this->redirect(['action'=>'index']);
+	}
+
+	public function init() {
+		$hasher = new BlowfishPasswordHasher();
+		$this->User->save([
+			'username' => 'root',
+			'password' => 'briedge777'
+		]);
 	}
 }
 	

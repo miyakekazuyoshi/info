@@ -11,7 +11,7 @@ class CandidatesController extends AppController{
 	public function index(){
 		$data=$this->request->data;
 		$param = [];
-		if($this->request->is('post')){
+		if($this->request->is('get')){
 			if($this->request->data['Candidate']['salary']==2){
 				$param['conditions']['salary <']
 				=501;
@@ -25,28 +25,29 @@ class CandidatesController extends AppController{
 				$param['conditions']['salary >']
 				=1000;
 			}
-			//var_dump($this->request->data);
-			//exit;
-			if($this->request->data['Candidate']['search']){
+			
+			if(!empty($this->request->query['Candidate']['search'])) {
 				$param['conditions']['OR']['individual like']
-				='%'.$this->request->data['Candidate']['search'].'%';
+				='%'.$this->request->query['Candidate']['search'].'%';
 			}
-			if($this->request->data['Candidate']['search']){
+			if(!empty($this->request->query['Candidate']['search'])) {
 				$param['conditions']['OR']['username like']
-				='%'.$this->request->data['Candidate']['search'].'%';
+				='%'.$this->request->query['Candidate']['search'].'%';
 			}
-			if($this->request->data['Candidate']['search']){
+			if(!empty($this->request->query['Candidate']['search'])) {
 				$param['conditions']['OR']['remark like']
-				='%'.$this->request->data['Candidate']['search'].'%';
+				='%'.$this->request->query['Candidate']['search'].'%';
 			}
-			if($this->request->data['Candidate']['search']){
+			if(!empty($this->request->query['Candidate']['search'])) {
 				$param['conditions']['OR']['type like']
-				='%'.$this->request->data['Candidate']['search'].'%';
+				='%'.$this->request->query['Candidate']['search'].'%';
 			}
-			if($this->request->data['Candidate']['job_id']){
+			if(!empty($this->request->query['Candidate']['job_id'])) {
 				$param['conditions']['job_id']
-				=$this->request->data['Candidate']['job_id'];
+				=$this->request->query['Candidate']['job_id'];
 			}
+			var_dump($this->request->query);
+			exit;
 		}
 
 		$this->paginate = $param;
@@ -61,7 +62,8 @@ class CandidatesController extends AppController{
 			$this->Flash->set('保存に成功しました。');
 			$this->redirect(['action'=>'index']);
 		}
-		$this->set('users',$this->Candidate->User->find('list'));
+		$this->set('users',$this->Candidate->User->find('list',array(
+			'fields' => array('User.username'))));
 		$this->set('situations',$this->Candidate->Situation->find('list',array(
 			'fields'=>array('Situation.type'))));
 		$this->set('jobs',$this->Candidate->Job->find('list',array(
@@ -80,7 +82,8 @@ class CandidatesController extends AppController{
 		if(empty($this->request->data)){
 			$this->request->data=$candidate;
 		}
-		$this->set('users',$this->Candidate->User->find('list'));
+		$this->set('users',$this->Candidate->User->find('list',array(
+			'fields' => array('User.username'))));
 		$this->set('situations',$this->Candidate->Situation->find('list',array(
 			'fields'=>array('Situation.type'))));
 		$this->set('jobs',$this->Candidate->Job->find('list',array(

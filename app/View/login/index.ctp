@@ -7,11 +7,11 @@
 	<?=$this->Form->create('User');?>
 	<table>
 		<tr>
-			<th>ログインID</th>
+			<th>loginid</th>
 			<td><?=$this->Form->input('loginId',array('label'=>''));?></td>
 		</tr>
 		<tr>
-			<th>パスワード</th>
+			<th>password</th>
 			<td><?=$this->Form->input('password',array('label'=>''));?></td>
 		</tr>
 	</table>

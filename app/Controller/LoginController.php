@@ -10,7 +10,7 @@ class LoginController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index');
+		$this->Auth->allow('index','init');
 	}
 
 	public $uses = ['User'];
@@ -19,8 +19,8 @@ class LoginController extends AppController {
 		if ($this->request->is('post')) {
 			$data = $this->request->data;
 
-				var_dump($data);
-				exit;
+				//var_dump($data);
+				//exit;
 
 			if ($this->Auth->login()) {
 				return $this->redirect($this->Auth->redirect());
@@ -29,14 +29,12 @@ class LoginController extends AppController {
 			}
 		}
 	}
-/*
 	public function init() {
 		$hasher = new BlowfishPasswordHasher();
 		$this->User->save([
-			'name' => 'ブライエッジ',
-			'loginId' => 'briedge',
-			'password' => $hasher->hash('briedge777')
+			'username' => '花岡',
+			'password' => 'hanaoka'
 		]);
-	}*/
+	}
 
 }

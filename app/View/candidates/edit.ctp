@@ -1,4 +1,4 @@
-<?=$this->Form->create();?>
+<?=$this->Form->create('Candidate',array('type' => 'file','enctype' => 'multipart/form-data'));?>
 <?=$this->Form->input('individual',array(
 	'label'=>'候補者名',
 	'after'=>'苗字と名前の間にスペースを入れてください。',
