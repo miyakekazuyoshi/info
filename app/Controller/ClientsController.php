@@ -3,7 +3,7 @@ class ClientsController extends AppController{
 
 	public $components=array('Paginator');
 
-	public $Paginator=array(
+	public $paginator=array(
 		'limit'=>10,
 		'order'=>array('id'=>'asc')
 	);

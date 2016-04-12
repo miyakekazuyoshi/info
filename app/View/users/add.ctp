@@ -1,3 +1,6 @@
+<div align='center'>
+	<br><h3>ユーザー登録</h3><br>
+</div>
 <?=$this->Form->create();?>
 <?=$this->Form->input('username',array(
 	'label'=>'username',
