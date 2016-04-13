@@ -32,7 +32,10 @@
 		</tr>
 	<?php }?>
 
-	<?=$this->Form->create('Candidate',array('action'=>'index'));?>
+	<?=$this->Form->create('Candidate',array(
+		'type' => 'get',
+		'action'=>'index',
+	));?>
 	<?=$this->Form->input('search');?>
 	<br>
 	

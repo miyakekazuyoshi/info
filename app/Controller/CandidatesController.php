@@ -11,44 +11,45 @@ class CandidatesController extends AppController{
 	public function index(){
 		$data=$this->request->data;
 		$param = [];
-		if($this->request->is('get')){
-			if($this->request->data['Candidate']['salary']==2){
+
+		if(!empty($this->request->query)) {
+			if($this->request->query['data']['Candidate']['salary']==2){
 				$param['conditions']['salary <']
 				=501;
-			}else if($this->request->data['Candidate']['salary']==3){
+			}else if($this->request->query['data']['Candidate']['salary']==3){
 				$param['conditions']['salary between ? and ?']
 				=[501,800];
-			}else if($this->request->data['Candidate']['salary']==4){
+			}else if($this->request->query['data']['Candidate']['salary']==4){
 				$param['conditions']['salary between ? and ?']
 				=[801,1000];
-			}else if($this->request->data['Candidate']['salary']==5){
+			}else if($this->request->query['data']['Candidate']['salary']==5){
 				$param['conditions']['salary >']
 				=1000;
 			}
 			
-			if(!empty($this->request->query['Candidate']['search'])) {
+			if($this->request->query['search']){
 				$param['conditions']['OR']['individual like']
-				='%'.$this->request->query['Candidate']['search'].'%';
+				='%'.$this->request->query['search'].'%';
 			}
-			if(!empty($this->request->query['Candidate']['search'])) {
+			if($this->request->query['search']){
 				$param['conditions']['OR']['username like']
-				='%'.$this->request->query['Candidate']['search'].'%';
+				='%'.$this->request->query['search'].'%';
 			}
-			if(!empty($this->request->query['Candidate']['search'])) {
+			if($this->request->query['search']){
 				$param['conditions']['OR']['remark like']
-				='%'.$this->request->query['Candidate']['search'].'%';
+				='%'.$this->request->query['search'].'%';
 			}
-			if(!empty($this->request->query['Candidate']['search'])) {
+			if($this->request->query['search']){
 				$param['conditions']['OR']['type like']
-				='%'.$this->request->query['Candidate']['search'].'%';
+				='%'.$this->request->query['search'].'%';
 			}
-			if(!empty($this->request->query['Candidate']['job_id'])) {
+			if($this->request->query['data']['Candidate']['job_id']){
 				$param['conditions']['job_id']
 				=$this->request->query['Candidate']['job_id'];
 			}
-			var_dump($this->request->query);
-			exit;
 		}
+		//var_dump($this->request->query);
+		//exit;
 
 		$this->paginate = $param;
 

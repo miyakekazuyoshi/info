@@ -27,7 +27,10 @@
 		</tr>
 	<?php }?>
 
-	<?=$this->Form->create('Client',array('action'=>'index'));?>
+	<?=$this->Form->create('Client',array(
+		'type' => 'get',
+		'action'=>'index',
+	));?>
 	<?=$this->Form->input('search');?>
 	<?=$this->Form->end('検索');?><br><br>
 	<?=$this->Html->link('全件表示',['action'=>'index']);?><br><br>

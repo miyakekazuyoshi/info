@@ -1,4 +1,7 @@
-<?=$this->Form->create('Candidate',array('action'=>'index'));?>
+<?=$this->Form->create('Candidate',array(
+	'type' => 'get',
+	'action'=>'index',
+));?>
 <?=$this->Form->input('search');?>
 
 <?=$this->Form->input('未選択',array(
