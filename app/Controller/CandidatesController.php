@@ -43,9 +43,9 @@ class CandidatesController extends AppController{
 				$param['conditions']['OR']['type like']
 				='%'.$this->request->query['search'].'%';
 			}
-			if($this->request->query['data']['Candidate']['job_id'][0]){
+			if($this->request->query['data']['Candidate']['job_id']){
 				$param['conditions']['job_id']
-				=$this->request->query['Candidate']['job_id'];
+				=$this->request->query['data']['Candidate']['job_id'];
 			}
 		}
 		//var_dump($this->request->query);
