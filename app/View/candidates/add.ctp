@@ -1,4 +1,4 @@
-<?=$this->Form->create('Candidate',array('type' => 'file','enctype' => 'multipart/form-data'));?>
+<?=$this->Form->create('Candidate',array('type' => 'file'));?>
 <?=$this->Form->input('individual',array(
 	'label'=>'候補者名',
 	'after'=>'苗字と名前の間にスペースを入れてください。',
@@ -32,9 +32,14 @@
 	'label'=>'備考',
 	'after'=>'具体的なポジションや経験、人柄など',
 ));?>
+<?=$this->Form->input('Candidate.image',array(
+	'type' => 'file',
+	'label' => 'ファイル選択'
+));?>
+<?=$this->Form->input('Candidate.image_dir',array(
+	'type' => 'hidden'
+));?>
 <?=$this->flash->render();?>
-
-<?=$this->Form->file('image');?>
 
 <?=$this->Form->submit('登録');?>
 <?=$this->Form->end();?>

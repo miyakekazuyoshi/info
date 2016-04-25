@@ -1,32 +1,30 @@
 <?php
-class ImagesController extends AppController{
+	Class ImagesController extends AppController {
 
-	public $uses=('Image');
+		public $scaffold;
 
-	public function index(){
-		$this->set('images',$this->Image->find('all'));
-	}
+		public function index() {
+			$this->render('index');
+		}
 
-	public function add(){
-		if($this->request->is('post')){
-			$data=[
-				'filename'=>$this->request->data['Image']['image']['name'],
-				'contents'=>file_get_contents($this->request->data['Image']['image']['tmp_name'])
-			];
-			if($this->Image->save($data)){
-				//var_dump($data);
-				//exit;
-				$this->Flash->set('保存に成功しました。');
-				$this->redirect(['action'=>'index']);
+		public function add() {
+			if ($this->request->is('post')) {
+				$id = $this->Image->save($this->request->data);
+
+				$this->request('/Images/view/'.$this->Image->id);
+				return;
 			}
+			$this->request->render('index');
+		}
+
+		public function view() {
+			$id = $this->request->pass[0];
+
+			$option = array('conditions' => array('Image.id' => $id));
+			$data = $this->Image->find('all',$data);
+
+			$this->set('data',$data);
+
+			$this->render('view');
 		}
 	}
-
-	public function contents($filename){
-		$this->layout = false;
-		$image = $this->Image->findByFilename($filename);
-		
-		header('Content-type : image/png');
-		echo $image['Image']['contents'];
-	}
-}

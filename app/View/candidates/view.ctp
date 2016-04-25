@@ -24,5 +24,9 @@
 	<dd><?=$candidate['Candidate']['remark'];?></dd>
 
 	<dt>レジュメ</dt>
-	<dd><?=$candidate['Image']['contents'];?></dd>
+	<dd><?=$candidate['Candidate']['image'];?></dd>
+	<!--<?=$candidate['Candidate']['image_dir'];?>-->
+	<?=$this->Html->image('/files/candidate/image/'.$candidate['Candidate']['image_dir'].'/'.$candidate['Candidate']['image'],array('alt' => ['Candidate']['image']));?>
 </dl>
+
+<center><?=$this->Html->link('MENU',['controller'=>'menu','action'=>'index']);?></center>

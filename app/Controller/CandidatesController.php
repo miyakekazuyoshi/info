@@ -102,4 +102,12 @@ class CandidatesController extends AppController{
 		$candidate=$this->Candidate->findById($id);
 		$this->set('candidate',$candidate);
 	}
+
+	public function excrl() {
+		$this->layout = '';
+
+		$candidate = $this->Candidate->find('all');
+		$this->set('candidate',$candidate);
+	}
+
 }
