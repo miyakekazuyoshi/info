@@ -39,7 +39,7 @@
 <?=$this->Form->input('Candidate.image_dir',array(
 	'type' => 'hidden'
 ));?>
-<?=$this->flash->render();?>
+<?=$this->Flash->render();?>
 
 <?=$this->Form->submit('登録');?>
 <?=$this->Form->end();?>
