@@ -46,5 +46,5 @@
 	'after'=>'募集ポジションやその他注意点',
 ));?>
 <?=$this->Form->submit('登録');?>
-<?=$this->flash->render();?>
+<?=$this->Flash->render();?>
 <?=$this->Form->end();?>
