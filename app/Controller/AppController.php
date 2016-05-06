@@ -39,7 +39,7 @@ class AppController extends Controller {
 				'action'=>'index'
 			),*/
 			'loginRedirect'=>array(
-				'controller'=>'menu',
+				'controller'=>'Menu',
 				'action'=>'index'
 			),
 			'logoutRedirect'=>array(
