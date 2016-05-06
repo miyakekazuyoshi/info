@@ -35,7 +35,8 @@ class ClientsController extends AppController{
 			$this->Flash->set('保存に成功しました。');
 			$this->redirect(['action'=>'index']);
 		}
-		$this->set('users',$this->Client->User->find('list'));
+		$this->set('users',$this->Client->User->find('list',array(
+			'fields' => array('User.username'))));
 	}
 
 	public function edit($id){
