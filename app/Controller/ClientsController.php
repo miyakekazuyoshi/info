@@ -51,7 +51,8 @@ class ClientsController extends AppController{
 		if(empty($this->request->data)){
 			$this->request->data=$client;
 		}
-		$this->set('users',$this->Client->User->find('list'));
+		$this->set('users',$this->Client->User->find('list',array(
+			'fields' => array('User.username'))));
 	}
 
 	public function delete($id){
