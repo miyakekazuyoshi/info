@@ -1,4 +1,7 @@
 <?=$this->Form->create();?>
+<?=$this->Form->input('company',array(
+	'label'=>'企業名',
+));?>
 <?=$this->Form->input('visit',array(
 	'label'=>'初回訪問日',
 	'dateFormat'=>'YMD',
@@ -14,9 +17,7 @@
 	'options'=>$users,
 	'label'=>'企業担当',
 ));?>
-<?=$this->Form->input('company',array(
-	'label'=>'企業名',
-));?>
+
 <?=$this->Form->input('url',array(
 	'label'=>'URL',
 ));?>
