@@ -43,7 +43,7 @@ class AppController extends Controller {
 				'action'=>'index'
 			),
 			'logoutRedirect'=>array(
-				'controller'=>'Users',
+				'controller'=>'users',
 				'action'=>'login',
 			),
 			'authenticate' => array(
