@@ -1,3 +1,5 @@
+<title>MENU</title>
+
 <div align='center'>
 <br><h3><?=$msg;?></h3><br><hr><br>
 <?=$this->Html->link('ユーザー管理',['controller'=>'users','action'=>'index'])?><br><br>
