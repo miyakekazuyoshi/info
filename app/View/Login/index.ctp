@@ -15,7 +15,7 @@
 			<td><?=$this->Form->input('password',array('label'=>''));?></td>
 		</tr>
 	</table>
-	<?=$this->flash->render();?>
+	<?=$this->Flash->render();?>
 	<?=$this->Form->submit('ログイン');?>
 	<?=$this->Form->end();?>
 </div>
