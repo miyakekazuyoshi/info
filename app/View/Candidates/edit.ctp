@@ -32,13 +32,13 @@
 	'label'=>'備考',
 	'after'=>'具体的なポジションや経験、人柄など',
 ));?>
-<?=$this->Form->input('Candidate.image',array(
+<!--<?=$this->Form->input('Candidate.image',array(
 	'type' => 'file',
 	'label' => 'ファイル選択'
 ));?>
 <?=$this->Form->input('Candidate.image_dir',array(
 	'type' => 'hidden'
-));?>
+));?>-->
 <?=$this->Flash->render();?>
 
 <?=$this->Form->submit('登録');?>
