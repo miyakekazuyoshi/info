@@ -2,7 +2,7 @@
 class MenuController extends AppController{
 	
 	public function index(){
-		$msg='WELL COME!';
+		$msg='ブライエッジ管理システム';
 		$this->set('msg',$msg);
 	}
 }
