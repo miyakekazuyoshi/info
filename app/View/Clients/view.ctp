@@ -32,6 +32,9 @@
 	<dt>備考</dt>
 	<dd><?=nl2br($client['Client']['remark']);?></dd>
 
+	<dt>memo</dt>
+	<dd><?=nl2br($client['Client']['memo']);?></dd>
+
 </dl><br><br><br>
 
 <center><?=$this->Html->link('MENU',['controller'=>'menu','action'=>'index']);?></center>

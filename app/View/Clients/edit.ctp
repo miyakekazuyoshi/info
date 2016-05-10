@@ -46,6 +46,10 @@
 	'label'=>'備考',
 	'after'=>'募集ポジションやその他注意点',
 ));?>
+<?=$this->Form->input('memo',array(
+	'label'=>'memo',
+	'after'=>'社内共有事項など',
+));?>
 <?=$this->Form->submit('登録');?>
 <?=$this->Flash->render();?>
 <?=$this->Form->end();?>

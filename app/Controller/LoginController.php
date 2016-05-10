@@ -32,8 +32,8 @@ class LoginController extends AppController {
 	public function init() {
 		$hasher = new BlowfishPasswordHasher();
 		$this->User->save([
-			'username' => '岸田',
-			'password' => 'kishida'
+			'username' => '',
+			'password' => ''
 		]);
 	}
 
