@@ -9,6 +9,10 @@ class Candidate extends AppModel{
 		'individual'=>[
 			'rule'=>'notBlank',
 			'message'=>'候補者名を入力してください。'
+		],
+		'salary'=>[
+			'rule'=>'notBlank',
+			'message'=>'年収を入力してください。'
 		]
 	];
 }
