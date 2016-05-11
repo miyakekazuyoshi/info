@@ -26,6 +26,9 @@ class Candidate extends AppModel{
 		'age'=>[
 			'rule'=>'notBlank',
 			'message'=>'年齢を入力してください。'
+		],'salary'=>[
+			'rule'=>'notBlank',
+			'message'=>'年収を入力してください。'
 		]
 	];
 }

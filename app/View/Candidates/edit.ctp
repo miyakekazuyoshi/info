@@ -27,6 +27,7 @@
 ));?>
 <?=$this->Form->input('salary',array(
 	'label'=>'年収',
+	'after'=>'不明の場合は0万円と記入'
 ));?>
 <?=$this->Form->input('remark',array(
 	'label'=>'備考',
