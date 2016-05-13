@@ -2,6 +2,13 @@
 <?=$this->Form->input('company',array(
 	'label'=>'企業名',
 ));?>
+<?=$this->Form->input('contract',array(
+	'legend' => '',
+	'type' => 'radio',
+	'options' => array(
+		'契約書あり' => '契約書あり','契約書なし' =>'契約書なし',
+	)
+))?>
 <?=$this->Form->input('visit',array(
 	'label'=>'初回訪問日',
 	'dateFormat'=>'YMD',

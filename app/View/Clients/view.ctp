@@ -11,6 +11,9 @@
 	<dt>企業名</dt>
 	<dd><?=$client['Client']['company'].'  様';?></dd>
 
+	<dt>契約書</dt>
+	<dd><?=$client['Client']['contract'];?></dd>
+
 	<dt>URL</dt>
 	<dd><?=$client['Client']['url'];?></dd>
 

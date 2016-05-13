@@ -4,12 +4,10 @@ class Candidate extends AppModel{
 	public $actsAs = array(
 		'Upload.Upload' => array(
 			'image' => array(
-				'fields' => array(
-					'dir' => 'image_dir',
-					'nameCallback' => 'rename',
-				)
-			)
-		)
+				'rootDir' => WWW_ROOT,
+				'path' => 'files{DS}{model}{DS}{field}{DS}'
+			),
+		),
 	);
 
 	public function rename($field,$filename,$data,$option) {

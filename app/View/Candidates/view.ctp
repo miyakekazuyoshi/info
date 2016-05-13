@@ -23,8 +23,13 @@
 	<dt>備考</dt>
 	<dd><?=$candidate['Candidate']['remark'];?></dd>
 
-	<!--<?=$this->Html->image('/files/candidate/image/'.$candidate['Candidate']['image_dir'].'/'.$candidate['Candidate']['image'],array('alt' => ['Candidate']['image']));?>
-	<a href="/files/candidate/image/7/Exceltest.xlsx#page=1" target="_blank">ファイルを開く</a>-->
+	<!--<dt>レジュメ</dt>
+	<dd><?=$candidate['Candidate']['image'];?></dd>
+
+	<a href="/files/candidate/image/9/Miyake.xls#page=1" target="_blank">download</a><br>
+	<a href="/files/candidate/image/10/miyake.docx#page=1" target="_blank">download</a>
+	<a href="/files/candidate/image/11/miyake.pptx#page=1" target="_blank">download</a><br>-->
+	
 </dl><br><br><br>
 
 <center><?=$this->Html->link('MENU',['controller'=>'menu','action'=>'index']);?></center>

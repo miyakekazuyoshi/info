@@ -13,6 +13,10 @@ class Client extends AppModel{
 				'rule'=>'isUnique',
 				'message'=>'この企業はすでに登録されています。'
 			]
+		],
+		'contract' => [
+			'rule' => 'notBlank',
+				'message' => 'どちらかを入力してください。'
 		]
 	];
 }
