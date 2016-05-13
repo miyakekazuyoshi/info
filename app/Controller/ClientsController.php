@@ -14,7 +14,6 @@ class ClientsController extends AppController{
 				$this->paginate=[
 					'conditions'=>['OR'=>
 						['company like'=>'%'.$this->request->query['search'].'%',
-							'info like'=>'%'.$this->request->query['search'].'%',
 							'username like'=>'%'.$this->request->query['search'].'%',
 							'remark like'=>'%'.$this->request->query['search'].'%',
 						],
