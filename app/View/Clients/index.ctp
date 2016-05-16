@@ -13,7 +13,7 @@
 			<td><?=mb_substr($client['Client']['info'],0,30?></td>
 			<td><?=$client['User']['username'];?></td>
 			<td><?=$client['Client']['visit'];?></td>
-			<td><?=mb_substr($client['Client']['remark'],0,30?></td>
+			<td><?=mb_substr($client['Client']['remark'],0,30);?></td>
 
 
 			<td><?=$this->Html->link('詳細',['action'=>'view',$client['Client']['id']])?>
