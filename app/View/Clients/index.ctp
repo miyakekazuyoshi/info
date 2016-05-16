@@ -31,7 +31,13 @@
 	<center>
 		<?=$this->Form->input('search');?>
 		<?=$this->Form->end('検索');?><br><br>
-		<?=$this->Html->link('全件表示',['action'=>'index']);?>
+		<?=$this->Html->link('全件表示',['action'=>'index']);?><br><br><br>
+
+		<?=$this->Paginator->prev('<- 前へ',array(),null,array('class'=>'prev disabled'));?>
+		<?=$this->Paginator->numbers(array('separator'=>''));?>
+		<?=$this->Paginator->counter(array('format'=>'全%count%件'));?>
+		<?=$this->Paginator->counter(array('format'=>'{:page}/{:pages}ページを表示'));?>
+		<?=$this->Paginator->next('次へ->',array(),null,array('class'=>'next disabled'));?><br>
 	</center><br><br>
 	</table>
 
