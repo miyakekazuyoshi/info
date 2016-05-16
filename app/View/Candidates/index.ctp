@@ -70,7 +70,7 @@
 	<br><br><br>
 	</table>
 
-	<div algin='center'>
+	<br><div algin='center'>
 		<?=$this->Paginator->prev('<- 前へ',array(),null,array('class'=>'prev disabled'));?>
 		<?=$this->Paginator->numbers(array('separator'=>''));?>
 		<?=$this->Paginator->counter(array('format'=>'全%count%件'));?>

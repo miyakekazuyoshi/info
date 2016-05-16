@@ -41,7 +41,7 @@
 	</center><br><br>
 	</table>
 
-	<div align='center'>
+	<br><div align='center'>
 		<?=$this->Paginator->prev('<- 前へ',array(),null,array('class'=>'prev disabled'));?>
 		<?=$this->Paginator->numbers(array('separator'=>''));?>
 		<?=$this->Paginator->counter(array('format'=>'全%count%件'));?>
