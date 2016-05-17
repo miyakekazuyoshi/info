@@ -1,3 +1,6 @@
+<dev align='center'>
+	<h3>候補者内容編集</h3>
+</dev>
 <?=$this->Form->create('Candidate',array('type' => 'file'));?>
 <?=$this->Form->input('individual',array(
 	'label'=>'候補者名',

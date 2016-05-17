@@ -49,5 +49,3 @@
 		<?=$this->Paginator->next('次へ->',array(),null,array('class'=>'next disabled'));?><br><br>
 		<?=$this->Html->link('MENU',['controller'=>'menu','action'=>'index']);?>
 	</div>
-
-	

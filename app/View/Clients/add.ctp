@@ -1,3 +1,6 @@
+<dev align='center'>
+	<h3>企業登録</h3>
+</dev>
 <?=$this->Form->create();?>
 <?=$this->Form->input('company',array(
 	'label'=>'企業名',

@@ -10,22 +10,22 @@ class ClientsController extends AppController{
 	
 	public function index(){
 		$data=$this->request->deta;
-			if(!empty($this->request->query)) {
-				$this->paginate=[
-					'conditions'=>['OR'=>
-						['company like'=>'%'.$this->request->query['search'].'%',
-							'username like'=>'%'.$this->request->query['search'].'%',
-							'remark like'=>'%'.$this->request->query['search'].'%',
-						],
-					]
-				];
-			}
-			//var_dump($this->request->query);
-			//exit;
-			$this->set('clients',$this->paginate());
-			$this->set('company',$this->Client->find('list',array(
-				'fields'=>array('id','company')
-			)));
+		if(!empty($this->request->query)) {
+			$this->paginate=[
+				'conditions'=>['OR'=>
+					['company like'=>'%'.$this->request->query['search'].'%',
+						'username like'=>'%'.$this->request->query['search'].'%',
+						'remark like'=>'%'.$this->request->query['search'].'%',
+					],
+				]
+			];
+		}
+		//var_dump($this->request->query);
+		//exit;
+		$this->set('clients',$this->paginate());
+		$this->set('company',$this->Client->find('list',array(
+			'fields'=>array('id','company')
+		)));
 	}
 
 	public function add(){
