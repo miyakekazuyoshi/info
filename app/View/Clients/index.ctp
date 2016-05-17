@@ -29,7 +29,17 @@
 		'action'=>'index',
 	));?>
 	<center>
-		<?=$this->Form->input('search');?>
+		<?=$this->Form->input('search');?><br>
+
+	<div align='left'>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="1">root</label>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="2">諸田</label>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="3">川北</label>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="4">金子</label>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="5">花岡</label>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="6">添田</label>
+		<label><input type="checkbox" name="data[Candidate][user_id][]" value="7">岸田</label>
+	</div><br>
 		<?=$this->Form->end('検索');?><br><br>
 		<?=$this->Html->link('全件表示',['action'=>'index']);?><br><br><br>
 

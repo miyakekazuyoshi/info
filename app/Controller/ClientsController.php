@@ -8,26 +8,34 @@ class ClientsController extends AppController{
 		'order'=>array('id'=>'asc')
 	);
 	
-	public function index(){
-		$data=$this->request->deta;
+	public function index() {
+		$data = $this->request->data;
+		$param = [];
+
 		if(!empty($this->request->query)) {
-			$this->paginate=[
-				'conditions'=>['OR'=>
-					['company like'=>'%'.$this->request->query['search'].'%',
-						'username like'=>'%'.$this->request->query['search'].'%',
-						'remark like'=>'%'.$this->request->query['search'].'%',
-					],
-				]
-			];
+			if($this->request->query['search']) {
+				$param['conditions']['OR']['company like']
+				='%'.$this->request->query['search'].'%';
+			}
+			if($this->request->query['search']) {
+				$param['conditions']['OR']['username like']
+				='%'.$this->request->query['search'].'%';
+			}
+			if($this->request->query['search']) {
+				$param['conditions']['OR']['remark like']
+				='%'.$this->request->query['search'].'%';
+			}
+			if($this->request->query['data']['Candidate']['user_id']) {
+				$param['conditions']['user_id']
+				=$this->request->query['data']['Candidate']['user_id'];
+			}
 		}
 		//var_dump($this->request->query);
 		//exit;
+		
+		$this->paginate = $param;
 		$this->set('clients',$this->paginate());
-		$this->set('company',$this->Client->find('list',array(
-			'fields'=>array('id','company')
-		)));
 	}
-
 	public function add(){
 		if($this->request->is('post')){
 			$this->Client->save($this->request->data);

@@ -14,15 +14,19 @@ class CandidatesController extends AppController{
 
 		if(!empty($this->request->query)) {
 			if($this->request->query['data']['Candidate']['salary']==2){
+				$param['conditions']['salary']
+				=0;
+			}
+			if($this->request->query['data']['Candidate']['salary']==3){
 				$param['conditions']['salary <']
 				=501;
-			}else if($this->request->query['data']['Candidate']['salary']==3){
-				$param['conditions']['salary between ? and ?']
-				=[501,800];
 			}else if($this->request->query['data']['Candidate']['salary']==4){
 				$param['conditions']['salary between ? and ?']
-				=[801,1000];
+				=[501,800];
 			}else if($this->request->query['data']['Candidate']['salary']==5){
+				$param['conditions']['salary between ? and ?']
+				=[801,1000];
+			}else if($this->request->query['data']['Candidate']['salary']==6){
 				$param['conditions']['salary >']
 				=1000;
 			}

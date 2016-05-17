@@ -50,13 +50,16 @@
 		<label><input type="checkbox" name="data[Candidate][job_id][]" value="8">経理</label>
 		<label><input type="checkbox" name="data[Candidate][job_id][]" value="9">その他</label>
 		<br>
+	</div>
+	<div align='center'>
 		年収<br>
 		<select name="data[Candidate][salary]">
 			<option value="1">------</option>
-			<option value="2">500万以下</option>
-			<option value="3">500万～800万</option>
-			<option value="4">800万～1000万</option>
-			<option value="5">1000万以上</option>
+			<option value="2">不明</option>
+			<option value="3">500万以下</option>
+			<option value="4">500万～800万</option>
+			<option value="5">800万～1000万</option>
+			<option value="6">1000万以上</option>
 		</select>
 	</div>
 
