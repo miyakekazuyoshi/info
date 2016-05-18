@@ -43,7 +43,7 @@
 	'dateFormat'=>'YMD',
 	'monthNames'=>'true',
 	'maxYear'=>date('Y'),
-	'minYear'=>date('Y')-50,
+	'minYear'=>date('Y')-60,
 ));?>
 <?=$this->Form->input('member',array(
 	'label'=>'社員数',

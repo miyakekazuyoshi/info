@@ -1,5 +1,5 @@
 <dev align='center'>
-	<h3>企業内容編集</h3>
+	<h3>企業登録</h3>
 </dev>
 <?=$this->Form->create();?>
 <?=$this->Form->input('company',array(
@@ -43,7 +43,7 @@
 	'dateFormat'=>'YMD',
 	'monthNames'=>'true',
 	'maxYear'=>date('Y'),
-	'minYear'=>date('Y')-50,
+	'minYear'=>date('Y')-60,
 ));?>
 <?=$this->Form->input('member',array(
 	'label'=>'社員数',
