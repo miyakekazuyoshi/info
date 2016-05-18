@@ -40,4 +40,7 @@
 
 </dl><br><br><br>
 
-<center><?=$this->Html->link('MENU',['controller'=>'menu','action'=>'index']);?></center>
+<div align='center'>
+	<?=$this->Html->link('編集',['action'=>'edit',$client['Client']['id']]);?><br><br>
+	<?=$this->Html->link('MENU',['controller'=>'menu','action'=>'index']);?>
+</div>

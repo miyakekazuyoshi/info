@@ -1,4 +1,7 @@
 <center><h3>企業一覧</h3></center>
+<div align='right'>
+	<?=$this->Html->link('新規登録',['action' => 'add']);?>
+</div>
 	<table>
 		<tr><th>企業名</th>
 			<th>企業情報</th>

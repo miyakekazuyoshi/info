@@ -1,5 +1,8 @@
 	<div align='center'>
 	<h3>候補者一覧</h3>
+	<div align='right'>
+		<?=$this->Html->link('新規登録',['action' => 'add']);?>
+	</div>
 	<table>
 		<tr>
 			<th>候補者名</th>
@@ -61,7 +64,7 @@
 			<option value="5">800万～1000万</option>
 			<option value="6">1000万以上</option>
 		</select>
-	</div>
+	</div><br>
 
 	<?=$this->Form->end('検索');?><br><br>
 	<?=$this->Html->link('全件表示',['action'=>'index']);?><br><br><br>
