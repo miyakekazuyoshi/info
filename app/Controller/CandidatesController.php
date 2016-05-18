@@ -18,8 +18,8 @@ class CandidatesController extends AppController{
 				=0;
 			}
 			if($this->request->query['data']['Candidate']['salary']==3){
-				$param['conditions']['salary <']
-				=501;
+				$param['conditions']['salary between ? and ?']
+				=[1,501];
 			}else if($this->request->query['data']['Candidate']['salary']==4){
 				$param['conditions']['salary between ? and ?']
 				=[501,800];

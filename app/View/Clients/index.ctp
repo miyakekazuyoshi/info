@@ -1,4 +1,4 @@
-<center><h3>企業一覧</h3></center>
+<center><font size="6"color="#191970">Client</font></center>
 <div align='right'>
 	<?=$this->Html->link('新規登録',['action' => 'add']);?>
 </div>

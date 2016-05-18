@@ -40,7 +40,7 @@ class ClientsController extends AppController{
 		if($this->request->is('post')){
 			$this->Client->save($this->request->data);
 			$this->Flash->set('保存に成功しました。');
-			$this->redirect(['action'=>'clients?search=&data%5BCandidate%5D%5Buser_id%5D%5B%5D']);
+			$this->redirect(['action'=>'index']);
 		}
 		$this->set('users',$this->Client->User->find('list',array(
 			'fields' => array('User.username'))));

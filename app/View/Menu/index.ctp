@@ -1,5 +1,5 @@
 <div align='center'>
-<br><h3><?=$msg;?></h3>
+<br><font size='6'color='#191970'><?=$msg;?></font><br>
 <br><hr><br><br>
 <div align='right'>
 	<font size='4'><?=$this->Html->link('Logout',['controller'=>'login','action'=>'logout'])?></font>
