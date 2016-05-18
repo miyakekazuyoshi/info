@@ -1,4 +1,4 @@
-<center><font size="6"color="#191970">Client</font></center>
+<center><font size="6"color="#191970">Clients</font></center>
 <div align='right'>
 	<?=$this->Html->link('新規登録',['action' => 'add']);?>
 </div>

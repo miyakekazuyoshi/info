@@ -5,8 +5,8 @@
 	<font size='4'><?=$this->Html->link('Logout',['controller'=>'login','action'=>'logout'])?></font>
 </div><br><br>
 <!--<?=$this->Html->link('ユーザー管理',['controller'=>'users','action'=>'index'])?><br><br>-->
-<font size='5'><?=$this->Html->link('Client',['controller'=>'clients','action'=>'index'])?></font><br><br><br>
-<font size='5'><?=$this->Html->link('Candidate',['controller'=>'candidates','action'=>'index'])?></font><br><br><br>
+<font size='5'><?=$this->Html->link('Clients',['controller'=>'clients','action'=>'index'])?></font><br><br><br>
+<font size='5'><?=$this->Html->link('Candidates',['controller'=>'candidates','action'=>'index'])?></font><br><br><br>
 
 
 </div>

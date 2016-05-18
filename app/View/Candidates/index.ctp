@@ -1,5 +1,5 @@
 	<div align='center'>
-	<font size="6"color="#191970">Candidate</font>
+	<font size="6"color="#191970">Candidates</font>
 	<div align='right'>
 		<?=$this->Html->link('新規登録',['action' => 'add']);?>
 	</div>
